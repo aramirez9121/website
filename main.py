@@ -14,10 +14,5 @@ def goodbye():
     return render_template('goodbye.html', users=valid_users)
 
 
-@app.route("/users/<string:user>")
-def user(user):
-    return render_template('goodbye.html', user=user)
-
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
