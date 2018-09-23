@@ -1,6 +1,8 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+valid_users = ['Randy', 'Amy', 'Yo', 'Amy']
+
 
 @app.route("/")
 def hello():
@@ -9,7 +11,7 @@ def hello():
 
 @app.route("/goodbye")
 def goodbye():
-    return render_template('goodbye.html')
+    return render_template('goodbye.html', users=valid_users)
 
 
 @app.route("/users/<string:user>")

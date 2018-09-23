@@ -1,5 +1,10 @@
 <html>
     <body>
-        <h1>GOODBYE! {{user}}</h1>
+        <div>
+            Valid Users
+        </div>
+        {% for user in users %}
+            <h1>User: {{user}}</h1>
+        {% endfor %}
     </body>
 </html>
