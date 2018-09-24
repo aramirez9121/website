@@ -9,6 +9,11 @@ def hello():
     return render_template('hello.html')
 
 
+@app.route('/login')
+def testing():
+    return render_template('403.html')
+
+
 @app.route("/goodbye")
 def goodbye():
     return render_template('goodbye.html', users=valid_users)
